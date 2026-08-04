@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/*
+ * Brand tokens — see /Businesses/london-dentist-fictitious/brand/colors.md
+ * and /brand/typography.md. These OVERRIDE the engine's default palette
+ * from /Design-Systems/local-services/tokens.md. Real businesses should
+ * never use the engine's prototype palette in production.
+ */
+
+:root {
+  --color-primary: #2f5d5b;
+  --color-accent: #c9923b;
+  --color-ink: #1a2624;
+  --color-surface: #f8f4ec;
+  --color-surface-alt: #efe7d6;
+  --color-border: #d9cfb8;
+}
+
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-accent: var(--color-accent);
+  --color-ink: var(--color-ink);
+  --color-surface: var(--color-surface);
+  --color-surface-alt: var(--color-surface-alt);
+  --color-border: var(--color-border);
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-inter);
+  --font-utility: var(--font-jetbrains-mono);
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Two-tone focus ring — stays visible on both the surface background and the
+   primary-tone CTA sections. See engine/src/app/globals.css. */
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--color-surface);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

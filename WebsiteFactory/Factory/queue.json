@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "businesses": [
+    {
+      "slug": "example-dentist-brightsmile",
+      "business_name": "Brightsmile Dental (example)",
+      "subvertical": "dentist-clinic",
+      "city": "London",
+      "stage": "intake",
+      "status": "pending",
+      "assigned_worktree": null,
+      "updated_at": "2026-08-04T00:00:00Z",
+      "notes": "Placeholder row — replace or delete once you add real businesses."
+    },
+    {
+      "slug": "london-dentist-fictitious",
+      "business_name": "Fictitious Dental Practice (test data)",
+      "subvertical": "dentist-clinic",
+      "city": "London",
+      "stage": "qa",
+      "status": "done",
+      "assigned_worktree": null,
+      "updated_at": "2026-08-04T10:22:07.742Z",
+      "notes": "Stage 06 QA complete (see website/qa-report.md). Held at qa on purpose: Phase 3 ground rules forbid Stage 07 Deploy without explicit instruction. Do not advance without asking."
+    }
+  ],
+  "updated_at": "2026-08-04T10:22:07.742Z"
+}

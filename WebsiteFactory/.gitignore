@@ -1,0 +1,25 @@
+# Build outputs
+.next/
+out/
+dist/
+
+# Dependency caches
+node_modules/
+.npm/
+.pnp/
+.pnp.*
+
+# TypeScript build info
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment files (real secrets)
+.env
+.env.local
+.env*.local
+
+# Editor / OS junk
+.DS_Store
+.idea/
+.vscode/
+*.log

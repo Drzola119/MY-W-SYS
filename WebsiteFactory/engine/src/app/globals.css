@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — see /Design-Systems/local-services/tokens.md.
+ * These are the reference/prototyping palette. Real businesses in
+ * Businesses/<slug>/ will override these tokens via their own
+ * brand/colors.md (per Stage 03).
+ */
+
+:root {
+  --color-primary: #1f4b49;
+  --color-accent: #c9a227;
+  --color-ink: #16221f;
+  --color-surface: #f7f5f0;
+  --color-surface-alt: #ede8dd;
+  --color-border: #d8d2c4;
+}
+
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-accent: var(--color-accent);
+  --color-ink: var(--color-ink);
+  --color-surface: var(--color-surface);
+  --color-surface-alt: var(--color-surface-alt);
+  --color-border: var(--color-border);
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-geist-sans);
+  --font-utility: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Explicit focus ring — do not rely on browser defaults, which vary and are
+   easily lost. Two-tone so it stays visible on both the surface background
+   and the primary-tone CTA sections: a surface-colored inner ring separates
+   the ink outline from whatever sits behind it. */
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--color-surface);
+}
+
+/* Respect prefers-reduced-motion globally for any element using motion utilities. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "website-factory-os",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "engine",
+    "Businesses/london-dentist-fictitious/website"
+  ],
+  "scripts": {
+    "engine:dev": "npm --workspace engine run dev",
+    "engine:build": "npm --workspace engine run build",
+    "engine:lint": "npm --workspace engine run lint",
+    "engine:typecheck": "npm --workspace engine run typecheck",
+    "engine:test": "node scripts/factory.test.mjs"
+  }
+}
